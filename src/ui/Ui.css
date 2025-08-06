@@ -1,0 +1,46 @@
+body {
+    background-color: gray;
+}
+
+.Ui-Container {
+    display: flex;
+  /* flex-direction: column; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+.head{
+    /* font-size: large; */
+    font-family: 'Courier New', Courier, monospace;
+    /* font-weight: bolder; */
+}
+
+.msg {
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.inputContainer {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1.5rem;
+    flex-direction: row;
+    /* width: 100%; */
+}
+
+#inputTask {
+    width: 450px;
+    height: 35px;
+    text-align: center;
+    /* background-color: gray; */
+}
+
+.todo-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
