@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 📝 To‑Do List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time, cloud-powered To‑Do app built with **React**, **Firebase Firestore**, and **Anonymous Authentication**. Each user gets a private task list — no sign-up required.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+Access the live version on **[Vercel](https://to-do-list-flame-nine-58.vercel.app/)**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- ✅ Add, edit, and delete tasks seamlessly
+- 🔄 Real-time updates via Firebase Firestore
+- 🔐 Anonymous authentication — no login needed
+- ⚛️ Built using React Hooks (`useState`, `useEffect`, `useRef`)
+- 📱 Responsive and minimal UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Area       | Technology                       |
+| ---------- | -------------------------------- |
+| Frontend   | React (CRA)                      |
+| Logic      | React Hooks                      |
+| Backend    | Firebase Firestore + Auth        |
+| Deployment | Vercel / GitHub Pages (optional) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Folder Structure
 
-### `npm run eject`
+```
+to-do-list/
+├── public/
+│   └── index.html               # Root HTML template
+├── src/
+│   ├── list/                    # Task list item components
+│   │   ├── list.js
+│   │   └── list.css
+│   ├── ui/                      # UI wrapper components
+│   │   ├── Ui.js
+│   │   └── Ui.css
+│   ├── AuthProvider.js          # Firebase auth context provider
+│   ├── firebase.js              # Firebase config and initialization
+│   ├── App.js                   # Main app logic
+│   └── index.js                 # App entry point
+├── .env                         # Firebase environment variables
+├── package.json                 # Dependencies and scripts
+└── README.md                    # Project documentation
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clone the Repo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/Vandified/To-Do-List.git
+cd To-Do-List
+```
 
-## Learn More
+### 2. Set up Firebase
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a `.env` file and configure your Firebase credentials:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```env
+REACT_APP_FIREBASE_API_KEY=...
+REACT_APP_FIREBASE_AUTH_DOMAIN=...
+REACT_APP_FIREBASE_PROJECT_ID=...
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=...
+REACT_APP_FIREBASE_APP_ID=...
+```
 
-### Code Splitting
+### 3. Install Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+### 4. Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## ☁️ Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### ➤ Vercel
 
-### Deployment
+1. Push code to GitHub
+2. Import repo into [Vercel](https://vercel.com/)
+3. Add the same `.env` values in the Vercel dashboard
+4. Vercel handles build & deployment automatically
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### ➤ GitHub Pages (Optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```jsonc
+// Add to package.json
+"homepage": "https://Vandified.github.io/To-Do-List",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+Then run:
+
+```bash
+npm run deploy
+```
+
+> Make sure your Firestore & Auth allow access from this domain.
+
+---
+
+## 👤 Author
+
+**Domarov(Ajas)**  
+[GitHub](https://github.com/Vandified)
+
+---
+
+## ⭐️ Show Some Love
+
+If you found this helpful, consider giving it a ⭐️ on GitHub!
